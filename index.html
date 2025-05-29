@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lançamento MPE - IA - Pro: Revolucione sua PME!</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/favicon-final.ico" type="image/x-icon"> <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
             scroll-behavior: smooth;
         }
-        h1, h2, h3, .font-poppins { /* Estilo base para h1,h2,h3 - tamanhos serão controlados por Tailwind */
+        h1, h2, h3, .font-poppins { 
             font-family: 'Poppins', sans-serif;
         }
         .font-montserrat {
@@ -33,26 +33,24 @@
         .faq-answer {
             display: none;
         }
-        /* .section-title agora usa classes Tailwind diretamente no HTML para responsividade de tamanho */
          .benefit-card, .testimonial-card {
             background-color: white;
-            border-radius: 0.75rem; /* rounded-xl */
-            /* padding ajustado para responsividade diretamente nas classes */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            border-radius: 0.75rem; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); 
             transition: transform 0.3s ease;
         }
         .benefit-card:hover, .testimonial-card:hover {
             transform: translateY(-5px);
         }
         .header-logo {
-            height: 32px; /* Reduzido um pouco para mobile, pode ajustar com sm:h-40 se necessário */
+            height: 32px; 
             sm:height: 40px; 
         }
         .footer-logo {
             height: 48px; 
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 1rem; /* mb-4 */
+            margin-bottom: 1rem; 
         }
         .legal-text-content {
             max-width: 800px;
@@ -64,28 +62,26 @@
         .legal-text-content h3 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 1.25rem; /* text-xl */
-            sm:font-size: 1.5rem; /* sm:text-2xl */
+            font-size: 1.25rem; 
+            sm:font-size: 1.5rem; 
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
-            color: #1F2937; /* text-gray-800 */
+            color: #1F2937; 
         }
         .legal-text-content p, .legal-text-content ul {
             margin-bottom: 1rem;
-            font-size: 0.875rem; /* text-sm */
-            sm:font-size: 1rem; /* sm:text-base */
+            font-size: 0.875rem; 
+            sm:font-size: 1rem; 
         }
         .legal-text-content ul {
             list-style-type: disc;
             margin-left: 1.5rem;
         }
-
-        /* Estilos para o menu mobile simples (stack) */
         .mobile-nav-links {
-            display: none; /* Escondido por padrão */
+            display: none; 
         }
         .mobile-nav-links.active {
-            display: flex; /* Exibido quando ativo */
+            display: flex; 
         }
     </style>
 </head>
@@ -95,14 +91,13 @@
         <nav class="container mx-auto px-4 sm:px-6 py-3">
             <div class="flex items-center justify-between">
                 <a href="#">
-                    <img src="images/logo-PME-IA.png" alt="Logo MPE - IA - Pro" class="header-logo">
-                </a>
+                    <img src="images/logo-pme-ia.png" alt="Logo MPE - IA - Pro" class="header-logo"> </a>
                 <div class="hidden md:flex space-x-4 items-center">
                     <a href="#sobre-app" class="text-gray-600 hover:text-blue-600 px-3 py-2">O App</a>
                     <a href="#workshop" class="text-gray-600 hover:text-blue-600 px-3 py-2">Workshop</a>
                     <a href="#oferta" class="text-gray-600 hover:text-blue-600 px-3 py-2">Oferta</a>
                     <a href="#faq" class="text-gray-600 hover:text-blue-600 px-3 py-2">FAQ</a>
-                    <a href="#cta-final" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg cta-button text-sm">Inscreva-se Já!</a>
+                    <a href="https://www.sympla.com.br/evento-online/ultimas-vagas-workshop-mpe-ia-pro-beta-seu-passaporte-de-1-ano-por-r-99/2978567" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg cta-button text-sm">Inscreva-se Já!</a>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
@@ -117,7 +112,7 @@
                 <a href="#workshop" class="block text-gray-600 hover:text-blue-600 py-2">Workshop</a>
                 <a href="#oferta" class="block text-gray-600 hover:text-blue-600 py-2">Oferta</a>
                 <a href="#faq" class="block text-gray-600 hover:text-blue-600 py-2">FAQ</a>
-                <a href="#cta-final" class="w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg cta-button mt-2">Inscreva-se Já!</a>
+                <a href="https://www.sympla.com.br/evento-online/ultimas-vagas-workshop-mpe-ia-pro-beta-seu-passaporte-de-1-ano-por-r-99/2978567" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg cta-button mt-2">Inscreva-se Já!</a>
             </div>
         </nav>
     </header>
@@ -126,7 +121,7 @@
         <div class="container mx-auto px-4 sm:px-6 text-center">
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold mb-4 sm:mb-6">REVOLUCIONE SUA PME COM INTELIGÊNCIA ARTIFICIAL!</h1>
             <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-lato mb-6 sm:mb-8">Participe do Workshop Exclusivo MPE - IA - Pro e Ganhe <span class="font-bold text-yellow-300">1 ANO de Acesso Total</span> por <span class="font-bold text-yellow-300">APENAS R$99!</span></p>
-            <a href="#oferta" class="bg-orange-500 hover:bg-orange-600 text-white font-poppins font-semibold py-3 px-6 text-lg sm:py-4 sm:px-10 sm:text-xl rounded-lg cta-button shadow-xl">
+            <a href="https://www.sympla.com.br/evento-online/ultimas-vagas-workshop-mpe-ia-pro-beta-seu-passaporte-de-1-ano-por-r-99/2978567" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white font-poppins font-semibold py-3 px-6 text-lg sm:py-4 sm:px-10 sm:text-xl rounded-lg cta-button shadow-xl">
                 QUERO MINHA VAGA + 1 ANO DE APP!
             </a>
         </div>
@@ -140,8 +135,7 @@
             <div class="text-center p-6 sm:p-8 bg-blue-50 rounded-xl shadow-lg">
                 <h3 class="font-poppins text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700 mb-3 sm:mb-4">A Solução Inteligente Chegou: MPE - IA - Pro!</h3>
                 <p class="text-base sm:text-lg max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto">Imagine automatizar processos, tomar decisões baseadas em dados precisos, criar campanhas de marketing impactantes e treinar seus colaboradores de forma eficaz, tudo com o poder da Inteligência Artificial. O MPE - IA - Pro foi desenhado especificamente para as necessidades da sua PME, transformando desafios em oportunidades de crescimento.</p>
-                <img src="images/MPE-IA-Pro-Landing2.png" alt="Dashboard do App MPE - IA - Pro" class="mt-6 sm:mt-8 mx-auto rounded-lg shadow-xl w-full" style="max-width: 700px;">
-            </div>
+                <img src="images/MPE-IA-Pro-Landing.png" alt="Dashboard do App MPE - IA - Pro" class="mt-6 sm:mt-8 mx-auto rounded-lg shadow-xl w-full" style="max-width: 700px;"> </div>
         </div>
     </section>
 
@@ -189,8 +183,7 @@
                     <span class="text-2xl sm:text-3xl text-orange-500">🔍</span> <p class="font-semibold text-sm sm:text-base">TEMPO REAL: Busca com o Deep Research</p>
                 </div>
             </div>
-             <img src="images/MPE-IA-Pro-Landing-Multiple.png" alt="Mockup do App MPE - IA - Pro em diversos dispositivos" class="mt-8 sm:mt-12 mx-auto rounded-lg shadow-xl w-full" style="max-width: 800px;">
-        </div>
+             <img src="images/mpe-ia-pro-landing-multiple.png" alt="Mockup do App MPE - IA - Pro em diversos dispositivos" class="mt-8 sm:mt-12 mx-auto rounded-lg shadow-xl w-full" style="max-width: 800px;"> </div>
     </section>
 
     <section id="workshop" class="py-12 sm:py-16 md:py-24 bg-white">
@@ -209,8 +202,8 @@
                     <p class="text-lg sm:text-xl"><span class="font-semibold">Formato:</span> 100% Online e Ao Vivo</p>
                     <p class="text-lg sm:text-xl"><span class="font-semibold">Data:</span> Quinta-feira, 05 de Junho de 2025</p>
                     <p class="text-lg sm:text-xl"><span class="font-semibold">Horário:</span> 20:00 (Horário de Brasília)</p>
-                    <a href="COLOQUE_SEU_LINK_DO_SYMPLA_AQUI" target="_blank" rel="noopener noreferrer"> <img src="images/mpe-ia-sympla-landing.png" alt="Banner do Workshop MPE - IA - Pro" class="mt-4 sm:mt-6 mx-auto rounded-lg shadow-md hover:opacity-90 transition-opacity w-full" style="max-width: 400px;">
-                    </a>
+                    <a href="https://www.sympla.com.br/evento-online/ultimas-vagas-workshop-mpe-ia-pro-beta-seu-passaporte-de-1-ano-por-r-99/2978567" target="_blank" rel="noopener noreferrer">
+                        <img src="images/mpe-ia-sympla-landing.png" alt="Banner do Workshop MPE - IA - Pro" class="mt-4 sm:mt-6 mx-auto rounded-lg shadow-md hover:opacity-90 transition-opacity w-full" style="max-width: 400px;"> </a>
                 </div>
             </div>
         </div>
@@ -234,7 +227,7 @@
                     <p class="flex items-center"><span class="text-green-500 text-xl sm:text-2xl mr-2">✅</span> Suporte prioritário no período Beta</p>
                 </div>
                 <br>
-                <a href="#payment-link" class="bg-green-500 hover:bg-green-600 text-white font-poppins font-semibold py-3 px-6 text-lg sm:py-4 sm:px-10 sm:text-xl rounded-lg cta-button shadow-xl">
+                <a href="https://www.sympla.com.br/evento-online/ultimas-vagas-workshop-mpe-ia-pro-beta-seu-passaporte-de-1-ano-por-r-99/2978567" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white font-poppins font-semibold py-3 px-6 text-lg sm:py-4 sm:px-10 sm:text-xl rounded-lg cta-button shadow-xl">
                     QUERO MINHA VAGA + 1 ANO DE APP POR R$99!
                 </a>
             </div>
@@ -360,7 +353,7 @@
         <div class="container mx-auto px-4 sm:px-6 text-center">
             <h2 class="font-poppins text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Pronto para Decolar seu Negócio com a IA?</h2>
             <p class="text-lg sm:text-xl mb-6 sm:mb-8 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto">Não perca a chance de ter acesso antecipado e EXCLUSIVO à versão Beta do MPE - IA - Pro por 1 ano, participando do nosso workshop transformador por apenas R$99!</p>
-            <a href="#payment-link-final" class="bg-orange-500 hover:bg-orange-600 text-white font-poppins font-semibold py-3 px-6 text-lg sm:py-4 sm:px-10 sm:text-xl rounded-lg cta-button shadow-xl">
+            <a href="https://www.sympla.com.br/evento-online/ultimas-vagas-workshop-mpe-ia-pro-beta-seu-passaporte-de-1-ano-por-r-99/2978567" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white font-poppins font-semibold py-3 px-6 text-lg sm:py-4 sm:px-10 sm:text-xl rounded-lg cta-button shadow-xl">
                 GARANTIR MEU ACESSO EXCLUSIVO AGORA!
             </a>
             <p class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-400">Transforme sua PME com Inteligência Artificial. Vagas limitadas!</p>
@@ -496,7 +489,7 @@
 
     <footer class="bg-gray-900 text-gray-400 py-8 sm:py-12">
         <div class="container mx-auto px-4 sm:px-6 text-center">
-            <img src="images/logo-PME-IA.png" alt="Logo MPE - IA - Pro" class="footer-logo">
+            <img src="images/logo-pme-ia.png" alt="Logo MPE - IA - Pro" class="footer-logo">
             <p class="font-poppins text-base sm:text-lg mb-2 text-white">MPE - IA - Pro</p>
             <p class="mb-3 sm:mb-4 text-xs sm:text-sm">&copy; 2024-2025 MPE - IA - Pro. Todos os direitos reservados.</p>
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4 text-sm">
@@ -580,31 +573,33 @@
                     if (hrefAttribute === '#') { 
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: 'smooth' });
+                        // Esconder menu mobile após clique no link para o topo
+                        if (mobileNavLinksContainer && mobileNavLinksContainer.classList.contains('active')) {
+                           mobileNavLinksContainer.classList.remove('active');
+                        }
                         return;
                     }
 
                     const targetElement = document.querySelector(hrefAttribute);
 
                     if (targetElement) {
-                        // Se for link de pagamento (que ainda é um placeholder #payment-link ou #payment-link-final)
-                        if (hrefAttribute.includes('payment-link')) { 
-                            console.log("Link de pagamento clicado, aguardando URL real do Sympla: " + hrefAttribute);
-                            e.preventDefault(); // Previne o scroll para um # inexistente, já que o link real virá depois
-                            // Quando tiver o link do Sympla, ele será colocado diretamente no href dos botões, 
-                            // e não precisaremos mais deste if para 'payment-link' no scroll.
-                        } else { // Para outras âncoras internas (FAQ, seções, política, termos)
+                        // Se for link de pagamento que ainda é um placeholder #payment-link ou #payment-link-final
+                        // Os links reais do Sympla não são hashes e serão tratados pelo comportamento padrão do navegador.
+                        if (hrefAttribute === '#payment-link' || hrefAttribute === '#payment-link-final') { 
+                            console.log("Link de pagamento placeholder clicado: " + hrefAttribute + ". Aguardando URL real do Sympla.");
+                            e.preventDefault(); 
+                        } else { 
                              e.preventDefault();
                              targetElement.scrollIntoView({
                                  behavior: 'smooth'
                             });
-                             // Esconder menu mobile após clique em link de âncora
-                             if (mobileNavLinksContainer && mobileNavLinksContainer.classList.contains('active')) {
-                                mobileNavLinksContainer.classList.remove('active');
-                             }
+                        }
+                        // Esconder menu mobile após clique em link de âncora
+                        if (mobileNavLinksContainer && mobileNavLinksContainer.classList.contains('active')) {
+                           mobileNavLinksContainer.classList.remove('active');
                         }
                     }
                 }
-                // Se não for um link de âncora (ex: link externo do Sympla na imagem do workshop), deixa o comportamento padrão do navegador acontecer.
             });
         });
     </script>

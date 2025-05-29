@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lançamento MPE - IA - Pro: Revolucione sua PME!</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -586,18 +586,13 @@
                     const targetElement = document.querySelector(hrefAttribute);
 
                     if (targetElement) {
-                        // Se for link de pagamento, não faz scroll, apenas loga (ou redireciona, se descomentado)
-                        if (hrefAttribute.includes('payment-link') || hrefAttribute === 'COLOQUE_SEU_LINK_DO_SYMPLA_AQUI') { // Usaremos isso para o link do Sympla
-                            console.log("Redirecionar para a página de pagamento para: " + hrefAttribute);
-                            // window.location.href = "COLOQUE_SEU_LINK_DO_SYMPLA_AQUI"; // ATUALIZAREMOS ISSO
-                            // Se o link do sympla não for uma âncora, o comportamento padrão do <a> (ir para o URL) deve funcionar,
-                            // então não precisamos de e.preventDefault() nem de scrollIntoView para ele, a menos que o href seja '#sympla-link-real'
-                            // e você queira que o clique nesse link vá para o Sympla.
-                            // Se o href é o link real do Sympla, o clique direto já funciona se não tiver e.preventDefault().
-                            // Para o placeholder "COLOQUE_SEU_LINK_DO_SYMPLA_AQUI", o clique não fará nada útil,
-                            // mas se for um link externo real, não queremos o preventDefault().
-                            // A lógica atual de não ter preventDefault para links externos já está ok.
-                        } else { 
+                        // Se for link de pagamento (que ainda é um placeholder #payment-link ou #payment-link-final)
+                        if (hrefAttribute.includes('payment-link')) { 
+                            console.log("Link de pagamento clicado, aguardando URL real do Sympla: " + hrefAttribute);
+                            e.preventDefault(); // Previne o scroll para um # inexistente, já que o link real virá depois
+                            // Quando tiver o link do Sympla, ele será colocado diretamente no href dos botões, 
+                            // e não precisaremos mais deste if para 'payment-link' no scroll.
+                        } else { // Para outras âncoras internas (FAQ, seções, política, termos)
                              e.preventDefault();
                              targetElement.scrollIntoView({
                                  behavior: 'smooth'
@@ -609,6 +604,7 @@
                         }
                     }
                 }
+                // Se não for um link de âncora (ex: link externo do Sympla na imagem do workshop), deixa o comportamento padrão do navegador acontecer.
             });
         });
     </script>

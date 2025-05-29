@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lançamento MPE - IA - Pro: Revolucione sua PME!</title>
     <link rel="icon" href="images/favicon-final.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Lançamento MPE - IA - Pro: Revolucione sua PME!">
+    <meta property="og:description" content="Descubra como o MPE - IA - Pro pode revolucionar sua PME! Inscreva-se no workshop exclusivo e ganhe 1 ano de acesso Beta.">
+    <meta property="og:image" content="https://pme-pro-com-ia.app.br/images/mpe-ia-pro-detalhe.png">
+    <meta property="og:url" content="https://pme-pro-com-ia.app.br/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lançamento MPE - IA - Pro: Revolucione sua PME!">
+    <meta name="twitter:description" content="Descubra como o MPE - IA - Pro pode revolucionar sua PME! Inscreva-se no workshop exclusivo e ganhe 1 ano de acesso Beta.">
+    <meta name="twitter:image" content="https://pme-pro-com-ia.app.br/images/mpe-ia-pro-detalhe.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -137,7 +148,7 @@
             <div class="text-center p-6 sm:p-8 bg-blue-50 rounded-xl shadow-lg">
                 <h3 class="font-poppins text-xl sm:text-2xl md:text-3xl font-semibold text-blue-700 mb-3 sm:mb-4">A Solução Inteligente Chegou: MPE - IA - Pro!</h3>
                 <p class="text-base sm:text-lg max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto">Imagine automatizar processos, tomar decisões baseadas em dados precisos, criar campanhas de marketing impactantes e treinar seus colaboradores de forma eficaz, tudo com o poder da Inteligência Artificial. O MPE - IA - Pro foi desenhado especificamente para as necessidades da sua PME, transformando desafios em oportunidades de crescimento.</p>
-                <img src="images/mpe-ia-pro-landig-mockup.png" alt="Dashboard do App MPE - IA - Pro" class="mt-6 sm:mt-8 mx-auto rounded-lg shadow-xl w-full" style="max-width: 700px;">
+                <img src="images/MPE-IA-Pro-Landing.png" alt="Dashboard do App MPE - IA - Pro" class="mt-6 sm:mt-8 mx-auto rounded-lg shadow-xl w-full" style="max-width: 700px;"> 
             </div>
         </div>
     </section>
@@ -366,7 +377,9 @@
         <div class="container mx-auto px-4 sm:px-6">
             <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-center mb-6 sm:mb-8 text-gray-800">Política de Privacidade</h2>
             <div class="legal-text-content">
-                <p><strong>Última atualização:</strong> 29 de maio de 2025</p> <p>A sua privacidade é importante para nós do MPE - IA - Pro. Esta política de privacidade explica como coletamos, usamos, compartilhamos e protegemos suas informações pessoais quando você visita nossa landing page, se inscreve em nosso workshop ou utiliza a versão Beta do nosso aplicativo MPE - IA - Pro (doravante "Serviços").</p>
+                <p><strong>Última atualização:</strong> 29 de maio de 2025</p> 
+                
+                <p>A sua privacidade é importante para nós do MPE - IA - Pro. Esta política de privacidade explica como coletamos, usamos, compartilhamos e protegemos suas informações pessoais quando você visita nossa landing page, se inscreve em nosso workshop ou utiliza a versão Beta do nosso aplicativo MPE - IA - Pro (doravante "Serviços").</p>
 
                 <h3>1. Informações que Coletamos</h3>
                 <p>Podemos coletar os seguintes tipos de informações:</p>
@@ -564,8 +577,8 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const hrefAttribute = this.getAttribute('href');
-                if (hrefAttribute.startsWith('#') && hrefAttribute.length > 1) { // Garante que não é apenas "#"
-                    if (hrefAttribute === '#') { // Link para o topo da página
+                if (hrefAttribute.startsWith('#') && hrefAttribute.length > 1) { 
+                    if (hrefAttribute === '#') { 
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     } else {
@@ -575,7 +588,6 @@
                             targetElement.scrollIntoView({ behavior: 'smooth' });
                         }
                     }
-                    // Esconder menu mobile após clique em link de âncora
                     if (mobileNavLinksContainer && mobileNavLinksContainer.classList.contains('active')) {
                        mobileNavLinksContainer.classList.remove('active');
                     }

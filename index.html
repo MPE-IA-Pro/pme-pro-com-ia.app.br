@@ -209,7 +209,7 @@
                     <p class="text-lg sm:text-xl"><span class="font-semibold">Formato:</span> 100% Online e Ao Vivo</p>
                     <p class="text-lg sm:text-xl"><span class="font-semibold">Data:</span> Quinta-feira, 05 de Junho de 2025</p>
                     <p class="text-lg sm:text-xl"><span class="font-semibold">Horário:</span> 20:00 (Horário de Brasília)</p>
-                    <a href="SEU_LINK_DO_SYMPLA_AQUI" target="_blank" rel="noopener noreferrer"> <img src="images/banner-workshop-sympla.jpg" alt="Banner do Workshop MPE - IA - Pro" class="mt-4 sm:mt-6 mx-auto rounded-lg shadow-md hover:opacity-90 transition-opacity w-full" style="max-width: 400px;">
+                    <a href="COLOQUE_SEU_LINK_DO_SYMPLA_AQUI" target="_blank" rel="noopener noreferrer"> <img src="images/mpe-ia-sympla-landing.png" alt="Banner do Workshop MPE - IA - Pro" class="mt-4 sm:mt-6 mx-auto rounded-lg shadow-md hover:opacity-90 transition-opacity w-full" style="max-width: 400px;">
                     </a>
                 </div>
             </div>
@@ -587,14 +587,25 @@
 
                     if (targetElement) {
                         // Se for link de pagamento, não faz scroll, apenas loga (ou redireciona, se descomentado)
-                        if (hrefAttribute.includes('payment-link')) { 
+                        if (hrefAttribute.includes('payment-link') || hrefAttribute === 'COLOQUE_SEU_LINK_DO_SYMPLA_AQUI') { // Usaremos isso para o link do Sympla
                             console.log("Redirecionar para a página de pagamento para: " + hrefAttribute);
-                            // window.location.href = "SUA_URL_DE_PAGAMENTO"; 
+                            // window.location.href = "COLOQUE_SEU_LINK_DO_SYMPLA_AQUI"; // ATUALIZAREMOS ISSO
+                            // Se o link do sympla não for uma âncora, o comportamento padrão do <a> (ir para o URL) deve funcionar,
+                            // então não precisamos de e.preventDefault() nem de scrollIntoView para ele, a menos que o href seja '#sympla-link-real'
+                            // e você queira que o clique nesse link vá para o Sympla.
+                            // Se o href é o link real do Sympla, o clique direto já funciona se não tiver e.preventDefault().
+                            // Para o placeholder "COLOQUE_SEU_LINK_DO_SYMPLA_AQUI", o clique não fará nada útil,
+                            // mas se for um link externo real, não queremos o preventDefault().
+                            // A lógica atual de não ter preventDefault para links externos já está ok.
                         } else { 
                              e.preventDefault();
                              targetElement.scrollIntoView({
                                  behavior: 'smooth'
                             });
+                             // Esconder menu mobile após clique em link de âncora
+                             if (mobileNavLinksContainer && mobileNavLinksContainer.classList.contains('active')) {
+                                mobileNavLinksContainer.classList.remove('active');
+                             }
                         }
                     }
                 }

@@ -4,6 +4,7 @@ body {
     margin: 0;
     color: #333;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -60,11 +61,13 @@ h2 {
     font-weight: 700;
     border-radius: 50px;
     font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
 }
 
 .cta-button:hover {
     background-color: #e65a50;
+    transform: scale(1.05);
 }
 
 /* Seção Problemas */
@@ -79,8 +82,11 @@ h2 {
     text-align: center;
 }
 
-.dor-item img {
+.dor-item .dor-icon {
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
+    color: #007bff;
 }
 
 .transicao {
@@ -104,11 +110,14 @@ h2 {
     max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 .video-container iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
     border: none;
+    display: block;
 }
 
 /* Seção Max Agentes */
@@ -134,9 +143,8 @@ h2 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* --- ESTILO PARA OS ÍCONES (EMOJI) --- */
 .agente-icon {
-    font-size: 3.5rem; /* Tamanho do emoji */
+    font-size: 3.5rem;
     line-height: 1;
     margin-bottom: 15px;
     display: flex;
@@ -144,8 +152,8 @@ h2 {
     justify-content: center;
     width: 90px;
     height: 90px;
-    background-color: #eef4ff; /* Fundo azul claro */
-    border-radius: 50%; /* Deixar circular */
+    background-color: #eef4ff;
+    border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -213,7 +221,6 @@ h2 {
 }
 .cta-oferta {
     margin-top: 30px;
-    display: inline-block;
 }
 
 /* Seção Como Funciona */
@@ -226,7 +233,6 @@ h2 {
     padding: 0;
     max-width: 800px;
     margin: 0 auto;
-    counter-reset: passos-counter;
 }
 .passos li {
     position: relative;
@@ -237,7 +243,8 @@ h2 {
 .passos li span {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 40px;
     height: 40px;
     background: #007bff;
@@ -280,6 +287,8 @@ footer {
 }
 .footer-logo {
     margin-bottom: 15px;
+    max-width: 150px;
+    height: auto;
 }
 footer p {
     margin: 5px 0;
@@ -297,21 +306,21 @@ footer p {
     color: white;
     border: none;
     border-radius: 50px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
     font-size: 1rem;
 }
-#botaoAbrirChat img {
+#botaoAbrirChat img.chat-logo {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     margin-right: 10px;
 }
 #janela-chat {
-    display: none; /* Inicia fechado */
+    display: none;
     flex-direction: column;
     width: 350px;
     height: 500px;
@@ -340,6 +349,8 @@ footer p {
     flex-grow: 1;
     padding: 15px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 .chat-corpo p {
     margin: 0 0 10px;

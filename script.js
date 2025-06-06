@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!chatCorpo) return;
         const p = document.createElement('p');
         p.textContent = texto;
-        p.className = remetente; 
+        p.className = remetente;
         chatCorpo.appendChild(p);
         chatCorpo.scrollTop = chatCorpo.scrollHeight;
     }

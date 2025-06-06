@@ -1,4 +1,4 @@
-/* --- CORREÇÃO DE RESPONSIVIDADE --- */
+/* --- RESET E REGRAS GLOBAIS DE OURO --- */
 html {
   box-sizing: border-box;
 }
@@ -14,19 +14,14 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
     overflow-x: hidden; /* Garante que não haverá rolagem horizontal */
-}
-
-/* --- AJUSTE FINAL PARA GARANTIR O ENCAIXE NA TELA --- */
-header, section, footer {
-    width: 100vw;
-    max-width: 100%;
+    overflow-wrap: break-word; /* Força a quebra de palavras longas */
 }
 /* ------------------------------------ */
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px; /* Ajustado para não ter padding horizontal em telas muito pequenas */
 }
 
 h1, h2, h3, h4 {
@@ -433,11 +428,7 @@ footer p {
         padding: 12px 25px;
     }
     
-    .agentes-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .diferenciais-grid {
+    .agentes-grid, .diferenciais-grid {
         grid-template-columns: 1fr;
     }
 

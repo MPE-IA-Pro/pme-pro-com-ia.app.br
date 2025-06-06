@@ -1,11 +1,21 @@
-/* Estilos Gerais */
+/* --- CORREÇÃO DE RESPONSIVIDADE --- */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     color: #333;
     line-height: 1.6;
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Garante que não haverá rolagem horizontal */
 }
+/* ------------------------------------ */
 
 .container {
     max-width: 1100px;
@@ -19,8 +29,8 @@ h1, h2, h3, h4 {
 
 h2 {
     text-align: center;
-    font-size: 2rem; /* Ajuste para mobile */
-    margin-bottom: 30px; /* Ajuste para mobile */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .highlight {
@@ -31,39 +41,38 @@ h2 {
 #hero {
     background: #f4f7fc;
     text-align: center;
-    padding: 40px 20px; /* Ajuste para mobile */
+    padding: 60px 20px;
 }
 
 #hero h1 {
-    font-size: 2.2rem; /* Ajuste para mobile */
-    margin-bottom: 10px; /* Ajuste para mobile */
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 #hero .subtitle {
-    font-size: 1rem; /* Ajuste para mobile */
+    font-size: 1.2rem;
     max-width: 800px;
-    margin: 0 auto 20px; /* Ajuste para mobile */
+    margin: 0 auto 30px;
 }
 
 #hero .hero-visual img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 20px; /* Ajuste para mobile */
+    margin-bottom: 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .cta-button {
     background-color: #ff8c00; /* Laranja vibrante */
     color: #fff;
-    padding: 12px 25px; /* Ajuste para mobile */
+    padding: 15px 30px;
     text-decoration: none;
     font-weight: 700;
     border-radius: 50px;
-    font-size: 1rem; /* Ajuste para mobile */
+    font-size: 1.1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
-    margin-top: 15px; /* Ajuste para mobile */
 }
 
 .cta-button:hover {
@@ -73,51 +82,46 @@ h2 {
 
 /* Seção Problemas */
 #problemas {
-    padding: 40px 0; /* Ajuste para mobile */
+    padding: 60px 0;
 }
 
 .dores-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste para mobile */
-    gap: 15px; /* Ajuste para mobile */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     text-align: center;
 }
 
 .dor-item .dor-icon {
-    width: 40px; /* Ajuste para mobile */
-    height: 40px; /* Ajuste para mobile */
-    margin-bottom: 8px; /* Ajuste para mobile */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
     color: #ff8c00; /* Laranja vibrante */
 }
 
 .transicao {
     text-align: center;
-    margin-top: 30px; /* Ajuste para mobile */
-    font-size: 1rem; /* Ajuste para mobile */
+    margin-top: 40px;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 /* Seção Apresentação */
 #apresentacao-max-ia {
     background: #f9f9f9;
-    padding: 40px 0; /* Ajuste para mobile */
+    padding: 60px 0;
     text-align: center;
 }
 #apresentacao-max-ia p {
     max-width: 800px;
-    margin: 0 auto 20px; /* Ajuste para mobile */
-    font-size: 1rem; /* Ajuste para mobile */
+    margin: 0 auto 30px;
 }
 .video-container {
-    max-width: 95%; /* Ajuste para mobile */
+    max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
-}
-.video-container h3 {
-    font-size: 1.2rem; /* Ajuste para mobile */
-    margin-top: 15px; /* Ajuste para mobile */
 }
 .video-container iframe {
     width: 100%;
@@ -128,36 +132,36 @@ h2 {
 
 /* Seção Max Agentes */
 #max-agentes {
-    padding: 40px 0; /* Ajuste para mobile */
+    padding: 60px 0;
 }
 .agentes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste para mobile */
-    gap: 20px; /* Ajuste para mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 .agente-card {
     background: #fff;
     border: 1px solid #eee;
-    padding: 20px; /* Ajuste para mobile */
+    padding: 30px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .agente-card:hover {
-    transform: translateY(-3px); /* Ajuste para mobile */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Ajuste para mobile */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .agente-icon {
-    font-size: 2.5rem; /* Ajuste para mobile */
+    font-size: 3.5rem;
     line-height: 1;
-    margin-bottom: 10px; /* Ajuste para mobile */
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px; /* Ajuste para mobile */
-    height: 60px; /* Ajuste para mobile */
+    width: 90px;
+    height: 90px;
     background-color: #fff3e0; /* Tom claro de laranja */
     color: #ff8c00; /* Laranja vibrante */
     border-radius: 50%;
@@ -167,100 +171,93 @@ h2 {
 
 /* Seção Diferenciais */
 #diferenciais {
-    padding: 40px 0; /* Ajuste para mobile */
+    padding: 60px 0;
     background: #f4f7fc;
 }
 .diferenciais-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste para mobile */
-    gap: 15px; /* Ajuste para mobile */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 .diferencial-item {
     background: #fff;
-    padding: 15px; /* Ajuste para mobile */
+    padding: 20px;
     border-radius: 8px;
 }
 .diferencial-item h4 {
     color: #ff8c00; /* Laranja vibrante */
     margin-top: 0;
-    font-size: 1.1rem; /* Ajuste para mobile */
-}
-.diferencial-item p {
-    font-size: 1rem; /* Ajuste para mobile */
 }
 
 /* Seção Oferta */
 #oferta {
-    padding: 40px 0; /* Ajuste para mobile */
+    padding: 60px 0;
 }
 .highlight-oferta {
     color: #ff8c00; /* Laranja vibrante */
 }
 .oferta-box {
-    max-width: 90%; /* Ajuste para mobile */
+    max-width: 800px;
     margin: 0 auto;
     background: #fff9f8;
     border: 2px dashed #ff8c00; /* Laranja vibrante */
-    padding: 30px; /* Ajuste para mobile */
+    padding: 40px;
     border-radius: 10px;
     text-align: center;
 }
 .oferta-box ul {
     list-style: none;
     padding: 0;
-    margin: 15px 0; /* Ajuste para mobile */
+    margin: 20px 0;
     text-align: left;
     display: inline-block;
 }
 .oferta-box ul li {
-    margin-bottom: 8px; /* Ajuste para mobile */
-    font-size: 1rem; /* Ajuste para mobile */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 .preco {
-    font-size: 1.2rem; /* Ajuste para mobile */
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-top: 15px; /* Ajuste para mobile */
+    margin-top: 20px;
 }
 .valor-preco {
-    font-size: 2rem; /* Ajuste para mobile */
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ff8c00; /* Laranja vibrante */
 }
 .escassez {
-    margin-top: 15px; /* Ajuste para mobile */
+    margin-top: 20px;
     font-weight: 700;
-    font-size: 0.9rem; /* Ajuste para mobile */
 }
 .cta-oferta {
-    margin-top: 20px; /* Ajuste para mobile */
-    padding: 15px 30px; /* Manter o tamanho um pouco maior */
-    font-size: 1.1rem; /* Manter o tamanho um pouco maior */
+    margin-top: 30px;
 }
 
 /* Seção Como Funciona */
 #como-funciona {
-    padding: 40px 0; /* Ajuste para mobile */
+    padding: 60px 0;
     background: #f9f9f9;
 }
 .passos {
     list-style: none;
     padding: 0;
-    max-width: 90%; /* Ajuste para mobile */
+    max-width: 800px;
     margin: 0 auto;
 }
 .passos li {
     position: relative;
-    padding-left: 50px; /* Ajuste para mobile */
-    margin-bottom: 15px; /* Ajuste para mobile */
-    font-size: 1rem; /* Ajuste para mobile */
+    padding-left: 60px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 .passos li span {
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px; /* Ajuste para mobile */
-    height: 30px; /* Ajuste para mobile */
+    width: 40px;
+    height: 40px;
     background: #ff8c00; /* Laranja vibrante */
     color: #fff;
     border-radius: 50%;
@@ -268,34 +265,28 @@ h2 {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 0.9rem; /* Ajuste para mobile */
 }
 
 /* Seção CTA Final */
 #cta-final {
-    padding: 60px 20px; /* Ajuste para mobile */
+    padding: 80px 20px;
     text-align: center;
 }
-#cta-final h2 {
-    font-size: 1.8rem; /* Ajuste para mobile */
-}
 #cta-final p {
-    max-width: 90%; /* Ajuste para mobile */
-    margin: 15px auto 20px; /* Ajuste para mobile */
-    font-size: 1rem; /* Ajuste para mobile */
+    max-width: 800px;
+    margin: 20px auto 30px;
 }
 .cta-grande {
-    font-size: 1.1rem; /* Ajuste para mobile */
-    padding: 15px 30px; /* Ajuste para mobile */
+    font-size: 1.3rem;
+    padding: 20px 40px;
 }
 .duvidas-link {
-    margin-top: 15px; /* Ajuste para mobile */
+    margin-top: 20px;
 }
 .duvidas-link a {
     color: #ff8c00; /* Laranja vibrante */
     text-decoration: underline;
     font-weight: 600;
-    font-size: 0.9rem; /* Ajuste para mobile */
 }
 
 /* Footer */
@@ -303,23 +294,22 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px; /* Ajuste para mobile */
-    font-size: 0.8rem; /* Ajuste para mobile */
+    padding: 30px 20px;
 }
 .footer-logo {
-    margin-bottom: 10px; /* Ajuste para mobile */
-    max-width: 120px; /* Ajuste para mobile */
+    margin-bottom: 15px;
+    max-width: 150px;
     height: auto;
 }
 footer p {
-    margin: 3px 0; /* Ajuste para mobile */
+    margin: 5px 0;
 }
 
 /* --- Estilos do Chatbot --- */
 #chatbot-flutuante {
     position: fixed;
-    bottom: 15px; /* Ajuste para mobile */
-    right: 15px; /* Ajuste para mobile */
+    bottom: 20px;
+    right: 20px;
     z-index: 1000;
 }
 #botaoAbrirChat {
@@ -327,63 +317,56 @@ footer p {
     color: white;
     border: none;
     border-radius: 50px;
-    padding: 8px 12px; /* Ajuste para mobile */
+    padding: 10px 15px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-    font-size: 0.9rem; /* Ajuste para mobile */
+    font-size: 1rem;
 }
 #botaoAbrirChat img.chat-logo {
-    width: 25px; /* Ajuste para mobile */
-    height: 25px; /* Ajuste para mobile */
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    margin-right: 8px; /* Ajuste para mobile */
+    margin-right: 10px;
 }
 #janela-chat {
     display: none;
     flex-direction: column;
-    width: 90%; /* Ajuste para mobile */
-    max-width: 350px; /* Limite máximo para telas maiores */
-    height: 400px; /* Ajuste para mobile */
-    position: fixed; /* Fixar na tela para melhor experiência mobile */
-    bottom: 60px; /* Ajuste para não cobrir o botão */
-    right: 15px; /* Alinhar com o botão */
+    width: 350px;
+    height: 500px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     overflow: hidden;
-    z-index: 1001; /* Acima do botão */
 }
 .chat-header {
     background: #ff8c00; /* Laranja vibrante */
     color: white;
-    padding: 12px; /* Ajuste para mobile */
+    padding: 15px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1rem; /* Ajuste para mobile */
 }
 #botaoFecharChat {
     background: none;
     border: none;
     color: white;
-    font-size: 1.2rem; /* Ajuste para mobile */
+    font-size: 1.5rem;
     cursor: pointer;
 }
 .chat-corpo {
     flex-grow: 1;
-    padding: 10px; /* Ajuste para mobile */
+    padding: 15px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    font-size: 0.9rem; /* Ajuste para mobile */
 }
 .chat-corpo p {
-    margin: 0 0 8px; /* Ajuste para mobile */
-    padding: 8px 10px; /* Ajuste para mobile */
-    border-radius: 15px; /* Ajuste para mobile */
+    margin: 0 0 10px;
+    padding: 8px 12px;
+    border-radius: 18px;
     max-width: 85%;
     word-wrap: break-word;
 }
@@ -402,106 +385,62 @@ footer p {
 .chat-input {
     display: flex;
     border-top: 1px solid #eee;
-    padding: 8px; /* Ajuste para mobile */
+    padding: 10px;
 }
 .chat-input input {
     flex-grow: 1;
     border: 1px solid #ccc;
-    border-radius: 15px; /* Ajuste para mobile */
-    padding: 8px 12px; /* Ajuste para mobile */
-    font-size: 0.9rem; /* Ajuste para mobile */
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
 }
 .chat-input button {
     background-color: #ff8c00; /* Laranja vibrante */
     color: white;
     border: none;
-    padding: 8px 12px; /* Ajuste para mobile */
-    border-radius: 15px; /* Ajuste para mobile */
-    margin-left: 8px; /* Ajuste para mobile */
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-left: 10px;
     cursor: pointer;
-    font-size: 0.9rem; /* Ajuste para mobile */
 }
 
 /* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        line-height: 1.2;
+    }
 
-/* Telas menores que 600px (celulares) */
-@media (max-width: 599px) {
     h2 {
         font-size: 1.8rem;
-        margin-bottom: 25px;
     }
-    #hero {
-        padding: 30px 15px;
-    }
+
     #hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
+
     #hero .subtitle {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
+
     .cta-button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-    .dores-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 10px;
-    }
-    .dor-item p {
-        font-size: 0.8rem;
-    }
-    .agentes-grid {
-        grid-template-columns: 1fr; /* Um agente por linha em telas pequenas */
-    }
-    .diferenciais-grid {
-        grid-template-columns: 1fr; /* Um diferencial por linha em telas pequenas */
-    }
-    .passos li {
-        padding-left: 40px;
-        font-size: 0.9rem;
-    }
-    .passos li span {
-        width: 25px;
-        height: 25px;
-        font-size: 0.8rem;
-    }
-    #cta-final h2 {
-        font-size: 1.6rem;
-    }
-    #cta-final p {
-        font-size: 0.9rem;
-    }
-    .cta-grande {
         font-size: 1rem;
         padding: 12px 25px;
     }
-    footer {
-        font-size: 0.7rem;
+    
+    .agentes-grid, .diferenciais-grid {
+        grid-template-columns: 1fr;
     }
-}
 
-/* Telas entre 600px e 767px (tablets pequenos) */
-@media (min-width: 600px) and (max-width: 767px) {
-    h2 {
-        font-size: 2.2rem;
+    .passos li {
+        font-size: 1rem;
+        padding-left: 50px;
     }
-    #hero h1 {
-        font-size: 2.5rem;
-    }
-    .agentes-grid {
-        grid-template-columns: repeat(2, 1fr); /* Dois agentes por linha em tablets menores */
-    }
-    .diferenciais-grid {
-        grid-template-columns: repeat(2, 1fr); /* Dois diferenciais por linha em tablets menores */
-    }
-}
 
-/* Telas entre 768px e 991px (tablets maiores) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .agentes-grid {
-        grid-template-columns: repeat(3, 1fr); /* Três agentes por linha em tablets maiores */
-    }
-    .diferenciais-grid {
-        grid-template-columns: repeat(3, 1fr); /* Três diferenciais por linha em tablets maiores */
+    #janela-chat {
+        width: calc(100vw - 30px);
+        height: 70vh;
+        max-height: 500px;
+        bottom: 75px;
+        right: 15px;
     }
 }

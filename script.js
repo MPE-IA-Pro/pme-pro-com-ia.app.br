@@ -30,110 +30,97 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatInput = document.querySelector('#janela-chat .chat-input input');
     const chatSendButton = document.querySelector('#janela-chat .chat-input button');
 
-    // NOVA Base de Conhecimento do MaxTrainer (Foco: Crowdfunding e Explicação do Projeto)
+    // Base de Conhecimento do MaxTrainer (foco no Catarse)
     const faqMaxTrainer = {
-        // Saudações
-        "olá": "Olá! Eu sou o MaxTrainer, a IA de treinamento do Max IA. Como posso te ajudar a entender nosso projeto e a campanha no Catarse?",
-        "oi": "Oi! Que bom ver você por aqui. Fique à vontade para perguntar tudo sobre o Max IA!",
-        "tudo bem": "Tudo ótimo, e pronto para te ajudar a revolucionar sua gestão! E com você?",
+        // Saudações e introdução
+        "olá": "Olá! Eu sou o MaxTrainer, o agente de IA para capacitação. Como posso ajudar você a conhecer o projeto Max IA hoje?",
+        "oi": "Oi! Que bom que você está aqui. Pergunte-me sobre o Max IA e nossa campanha no Catarse!",
+        "tudo bem": "Tudo ótimo por aqui, pronto para te ajudar! E com você?",
 
-        // Sobre o Max IA (Novos Conceitos)
-        "o que é max ia": "O Max IA é o seu centro de comando inteligente, um app empresarial exclusivo que ativa o 'algoritmo da sua empresa'. Ele é liderado pelo Agente Max e reúne um time de IAs especialistas (os Max Agentes) para otimizar marketing, finanças, gestão e muito mais!",
-        "max ia": "O Max IA é uma plataforma com múltiplos agentes de IA que trabalham juntos para sua PME ou agência. Ele aprende com seu negócio e te dá superpoderes para tomar as melhores decisões. Quer saber sobre algum agente específico?",
-        "agente max": "O Agente Max é seu assistente pessoal de IA dentro da plataforma. Ele é o maestro que coordena todos os outros Max Agentes, traduz os dados em insights fáceis de entender e garante que você esteja sempre no comando.",
-        "algoritmo da empresa": "O 'algoritmo da sua empresa' é a alma do Max IA! É um sistema que aprende continuamente com os dados, interações e resultados do SEU negócio. Isso torna as soluções e os insights ultra personalizados e cada vez mais inteligentes.",
+        // Sobre o Max IA
+        "o que é max ia": "O Max IA é seu futuro centro de comando inteligente. Ele une múltiplos agentes de IA (marketing, finanças, etc.) que aprendem com seu negócio, criando o 'algoritmo da sua empresa' para oferecer insights e soluções únicas. O objetivo é colocar você no controle, com o poder da IA.",
+        "max ia": "O Max IA é um ecossistema de agentes de IA para ajudar sua PME ou agência a crescer com mais eficiência. Quer saber mais sobre algum agente específico, como o MaxMarketing ou o MaxFinanceiro?",
+        "agente max": "O Agente Max é seu assistente pessoal de IA dentro da plataforma. Ele te guia, organiza as informações dos outros agentes e garante que você esteja sempre no comando.",
+        "algoritmo da empresa": "O 'algoritmo da sua empresa' é nosso grande diferencial! Ele aprende continuamente com os dados e interações do SEU negócio, tornando os insights e as soluções cada vez mais personalizados e eficazes.",
 
-        // Campanha de Crowdfunding (Catarse)
-        "catarse": "O Catarse é a plataforma de financiamento coletivo que escolhemos para lançar o Max IA. Através dela, você pode apoiar nosso projeto e, em troca, receber recompensas incríveis, como o acesso de 1 ano ao app por R$99.",
-        "crowdfunding": "Nossa campanha de crowdfunding (financiamento coletivo) no Catarse é a forma que encontramos de construir esse projeto junto com nossos futuros usuários. Seu apoio é fundamental para o desenvolvimento e você ainda garante acesso antecipado e com valor especial.",
-        "apoiar": "Para apoiar é simples: clique nos botões 'APOIE O PROJETO' na página. Você será direcionado para nossa campanha no Catarse. Lá, é só escolher a recompensa de R$99 e seguir os passos para confirmar.",
-        "como apoiar": "É fácil! 1. Clique nos botões de apoio para ir ao Catarse. 2. Escolha a recompensa de 'Acesso Beta por 1 Ano'. 3. Finalize o pagamento na plataforma. Pronto, você se tornou um pioneiro do Max IA!",
+        // Benefícios e Utilidades
+        "como ajuda pme": "O Max IA ajuda PMEs em todas as frentes: 🚀 MaxMarketing cria campanhas, 💰 MaxFinanceiro cuida das finanças, ⚙️ MaxAdministrativo otimiza a gestão, e muito mais. Simplificando: mais tempo, melhores decisões e mais resultados para sua PME!",
+        "para quem é": "O Max IA é ideal para Pequenas e Médias Empresas (PMEs), lojistas, empreendedores e Agências de Publicidade que buscam inovar, otimizar operações e crescer de forma inteligente.",
+        "benefícios": "Os principais benefícios são: ter especialistas virtuais 24/7, otimizar seu tempo, tomar decisões baseadas em dados, e personalizar suas estratégias com o 'algoritmo da empresa', tudo com você no comando!",
+
+        // Oferta de Lançamento (Catarse)
+        "preço": "Apoiando nosso projeto no Catarse com R$99, você garante 1 ano de acesso à versão Beta completa do Max IA e todos os seus Agentes, além de acesso ao nosso grupo exclusivo de pioneiros. É a nossa forma de agradecer aos primeiros a acreditarem no projeto!",
+        "oferta": "A recompensa principal na nossa campanha do Catarse, por um apoio de R$99, inclui: 1 ano de acesso ao Max IA Beta, participação no grupo exclusivo de pioneiros e seu nome nos créditos como apoiador fundador!",
+        "como participar": "É fácil! 1. Clique em qualquer botão laranja da página, como 'APOIE NO CATARSE'. 2. Você irá para nossa página no Catarse.me. 3. Lá, escolha a recompensa de R$99 e finalize seu apoio com segurança!",
+        "99 reais": "Exato! Com um apoio de apenas R$99 em nossa campanha no Catarse, você garante a recompensa 'Acesso Pioneiro', que te dá um ano inteiro de acesso à versão Beta, incluindo todos os Max Agentes e participação no grupo exclusivo.",
+        "apoiar": "Para apoiar, clique nos botões que te levam para a página do Catarse. Lá você encontrará todas as informações sobre o projeto e as recompensas. Seu apoio é fundamental para tirarmos esse projeto do papel!",
+        "catarse": "O Catarse é a plataforma de financiamento coletivo que escolhemos para lançar o Max IA. É um ambiente seguro onde você pode apoiar nosso projeto e garantir sua recompensa de pioneiro.",
         
-        // Oferta / Recompensa
-        "preço": "O apoio para garantir a recompensa principal é de apenas R$99. Com esse valor, você garante UM ANO de acesso à versão Beta completa do Max IA e todos os seus Agentes. É um valor simbólico para nossos apoiadores pioneiros!",
-        "99 reais": "Exato! Com um apoio único de R$99 na nossa campanha do Catarse, você ganha a recompensa de 1 ano de acesso completo ao Max IA Beta. É a nossa forma de agradecer quem acredita no projeto desde o início.",
-        "oferta": "A recompensa principal para apoiadores no Catarse é o acesso de 1 ano ao Max IA Beta, com todos os Max Agentes inclusos, por apenas R$99. É a sua chance de ser pioneiro e ajudar a moldar a ferramenta.",
-        "recompensa": "A recompensa principal é o acesso de 1 ano ao Max IA Beta por R$99. Ao nos apoiar, você garante o uso da plataforma assim que ela for lançada para os apoiadores.",
-        
-        // Público e Benefícios
-        "para quem é": "O Max IA foi desenhado para donos de Pequenas e Médias Empresas (PMEs), empreendedores, lojistas e também para Agências de Publicidade e Marketing que desejam otimizar suas operações e de seus clientes.",
-        "benefícios": "Os principais benefícios são: ter uma equipe de especialistas virtuais 24/7, economizar tempo e dinheiro, tomar decisões baseadas em dados personalizados do seu negócio e, o mais importante, ter o controle total para crescer de forma inteligente.",
-        "beta": "A versão Beta é uma fase de pré-lançamento. A plataforma está funcional e pronta para uso, mas contamos com o feedback dos nossos apoiadores pioneiros (como você!) para refinar detalhes e adicionar novas funcionalidades. Sua opinião será muito valiosa!",
-
-        // Despedidas e Agradecimentos
-        "obrigado": "Eu que agradeço o interesse! Se precisar de mais algo, é só chamar. Esperamos ter você como nosso apoiador!",
-        "tchau": "Até mais! Qualquer outra dúvida, estou por aqui. Não perca a chance de fazer parte do futuro da gestão!"
+        // Dúvidas Gerais
+        "beta": "A versão Beta é uma fase onde a plataforma está quase pronta. Os apoiadores do Catarse serão os primeiros a usar e nos ajudar com feedback valioso para torná-la perfeita antes do lançamento oficial!",
+        "chatbot": "Eu sou o MaxTrainer, um dos Max Agentes IA! Minha função aqui é te ajudar a entender tudo sobre o Max IA. Dentro da plataforma, eu ajudo a treinar equipes!",
+        "obrigado": "De nada! 😊 Se tiver mais alguma dúvida, é só perguntar! Seu interesse é muito importante para nós.",
+        "tchau": "Até logo! Espero te ver no nosso grupo de apoiadores pioneiros do Max IA!"
     };
 
-    // Função para adicionar mensagens na interface do chat
     function adicionarMensagemAoChat(texto, remetente = 'user') {
         if (!chatCorpo) return;
         const p = document.createElement('p');
         p.textContent = texto;
-        p.className = remetente; // Adiciona classe 'user' ou 'bot'
+        p.className = remetente; 
         chatCorpo.appendChild(p);
-        chatCorpo.scrollTop = chatCorpo.scrollHeight; // Auto-scroll
+        chatCorpo.scrollTop = chatCorpo.scrollHeight;
     }
 
-    // Função principal para o MaxTrainer responder
     function maxTrainerResponde(mensagemUsuario) {
-        const mensagemNormalizada = mensagemUsuario.toLowerCase().trim().replace(/[?]/g, '');
+        const mensagemNormalizada = mensagemUsuario.toLowerCase().trim().replace(/[?.,!]/g, '');
         let respostaEncontrada = false;
-
-        // Procura pela melhor correspondência na base de conhecimento
-        let melhorCorrespondecia = '';
-        let maiorContagem = 0;
 
         for (const palavraChave in faqMaxTrainer) {
             if (mensagemNormalizada.includes(palavraChave)) {
-                // Dá prioridade para correspondências mais longas/específicas
-                if (palavraChave.length > maiorContagem) {
-                    maiorContagem = palavraChave.length;
-                    melhorCorrespondecia = faqMaxTrainer[palavraChave];
-                    respostaEncontrada = true;
-                }
+                adicionarMensagemAoChat(faqMaxTrainer[palavraChave], "bot");
+                respostaEncontrada = true;
+                break;
             }
         }
-        
-        if (respostaEncontrada) {
-             adicionarMensagemAoChat(melhorCorrespondecia, "bot");
-        } else {
-             // Respostas padrão para quando não entende
+
+        if (!respostaEncontrada) {
             const respostasPadrao = [
-                "Desculpe, não captei bem sua pergunta. Poderia tentar de outra forma? Você pode perguntar sobre 'o que é max ia', 'como apoiar no catarse' ou 'qual a recompensa'.",
-                "Hmm, essa é nova para mim! Que tal perguntar sobre os benefícios do Max IA ou como funciona a campanha de financiamento coletivo?",
-                "Ainda estou aprendendo! Você pode me perguntar sobre as funcionalidades dos 'Max Agentes' ou sobre o valor do apoio de R$99."
+                "Desculpe, não captei bem sua pergunta. Poderia tentar de outra forma? Você pode perguntar sobre 'o que é max ia', 'preço para apoiar' ou 'como funciona a campanha'.",
+                "Hmm, essa é nova para mim! Que tal perguntar sobre os benefícios do Max IA ou como funciona o apoio pelo Catarse?",
+                "Ainda estou aprendendo! Você pode me perguntar sobre as funções dos 'Max Agentes' ou sobre a 'recompensa de R$99'."
             ];
             const respostaAleatoria = respostasPadrao[Math.floor(Math.random() * respostasPadrao.length)];
             adicionarMensagemAoChat(respostaAleatoria, "bot");
         }
     }
 
-    // Função para limpar o corpo do chat e adicionar saudação inicial do bot
     function iniciarConversaChatbot() {
         if(chatCorpo) {
-            chatCorpo.innerHTML = ''; // Limpa mensagens anteriores
-            adicionarMensagemAoChat("Olá! 👋 Sou o MaxTrainer. Estou aqui para tirar suas dúvidas sobre o projeto Max IA e nossa campanha no Catarse. Pode perguntar! (Ex: 'o que é max ia?', 'como apoiar?', 'qual o preço?')", "bot");
+            chatCorpo.innerHTML = '';
+            adicionarMensagemAoChat("Olá! 👋 Sou o MaxTrainer. Em que posso te ajudar sobre nosso projeto Max IA no Catarse? (Ex: 'o que é max ia?', 'qual o valor do apoio?', 'como participar?')", "bot");
         }
     }
 
-    // Lógica para abrir e fechar o chat
     function abrirChat() {
-        if (janelaChat) {
+        if (janelaChat && botaoAbrirChat) {
             janelaChat.style.display = 'flex';
+            botaoAbrirChat.style.display = 'none'; // Esconde o botão de abrir
             iniciarConversaChatbot();
             if (chatInput) chatInput.focus();
         }
     }
 
     function fecharChat() {
-        if (janelaChat) {
+        if (janelaChat && botaoAbrirChat) {
             janelaChat.style.display = 'none';
+            botaoAbrirChat.style.display = 'flex'; // Mostra o botão de abrir novamente
         }
     }
 
     if (botaoAbrirChat) botaoAbrirChat.addEventListener('click', abrirChat);
     if (botaoFecharChat) botaoFecharChat.addEventListener('click', fecharChat);
+    
     if (linkAbrirChatDuvidas) {
         linkAbrirChatDuvidas.addEventListener('click', function(e) {
             e.preventDefault();
@@ -141,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Event listener para enviar mensagem (botão e Enter)
     function enviarMensagemUsuario() {
         if (!chatInput) return;
         const mensagem = chatInput.value.trim();
@@ -163,5 +149,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    // --- Fim da Lógica do Chatbot MaxTrainer ---
 });

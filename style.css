@@ -519,3 +519,22 @@ footer a:hover {
         font-size: 0.9rem;
     }
 }
+/* Adicione ao final do seu arquivo style.css */
+
+/* Estilo para os novos ícones SVG */
+.dor-item svg {
+  margin-bottom: 10px;
+  color: #0A74DA; /* Cor principal dos títulos */
+}
+
+/* Ajuste no ícone do botão do chat */
+#botaoAbrirChat svg {
+    margin-right: 8px;
+}
+
+/* Esconder o SVG do botão do chat em mobile (mantendo o comportamento anterior) */
+@media (max-width: 768px) {
+    #botaoAbrirChat svg {
+        margin-right: 0;
+    }
+}

@@ -32,31 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Base de Conhecimento do MaxTrainer (foco no Catarse)
     const faqMaxTrainer = {
-        // Saudações e introdução
         "olá": "Olá! Eu sou o MaxTrainer, o agente de IA para capacitação. Como posso ajudar você a conhecer o projeto Max IA hoje?",
         "oi": "Oi! Que bom que você está aqui. Pergunte-me sobre o Max IA e nossa campanha no Catarse!",
         "tudo bem": "Tudo ótimo por aqui, pronto para te ajudar! E com você?",
-
-        // Sobre o Max IA
         "o que é max ia": "O Max IA é seu futuro centro de comando inteligente. Ele une múltiplos agentes de IA (marketing, finanças, etc.) que aprendem com seu negócio, criando o 'algoritmo da sua empresa' para oferecer insights e soluções únicas. O objetivo é colocar você no controle, com o poder da IA.",
         "max ia": "O Max IA é um ecossistema de agentes de IA para ajudar sua PME ou agência a crescer com mais eficiência. Quer saber mais sobre algum agente específico, como o MaxMarketing ou o MaxFinanceiro?",
         "agente max": "O Agente Max é seu assistente pessoal de IA dentro da plataforma. Ele te guia, organiza as informações dos outros agentes e garante que você esteja sempre no comando.",
         "algoritmo da empresa": "O 'algoritmo da sua empresa' é nosso grande diferencial! Ele aprende continuamente com os dados e interações do SEU negócio, tornando os insights e as soluções cada vez mais personalizados e eficazes.",
-
-        // Benefícios e Utilidades
         "como ajuda pme": "O Max IA ajuda PMEs em todas as frentes: 🚀 MaxMarketing cria campanhas, 💰 MaxFinanceiro cuida das finanças, ⚙️ MaxAdministrativo otimiza a gestão, e muito mais. Simplificando: mais tempo, melhores decisões e mais resultados para sua PME!",
         "para quem é": "O Max IA é ideal para Pequenas e Médias Empresas (PMEs), lojistas, empreendedores e Agências de Publicidade que buscam inovar, otimizar operações e crescer de forma inteligente.",
         "benefícios": "Os principais benefícios são: ter especialistas virtuais 24/7, otimizar seu tempo, tomar decisões baseadas em dados, e personalizar suas estratégias com o 'algoritmo da empresa', tudo com você no comando!",
-
-        // Oferta de Lançamento (Catarse)
         "preço": "Apoiando nosso projeto no Catarse com R$99, você garante 1 ano de acesso à versão Beta completa do Max IA e todos os seus Agentes, além de acesso ao nosso grupo exclusivo de pioneiros. É a nossa forma de agradecer aos primeiros a acreditarem no projeto!",
         "oferta": "A recompensa principal na nossa campanha do Catarse, por um apoio de R$99, inclui: 1 ano de acesso ao Max IA Beta, participação no grupo exclusivo de pioneiros e seu nome nos créditos como apoiador fundador!",
         "como participar": "É fácil! 1. Clique em qualquer botão laranja da página, como 'APOIE NO CATARSE'. 2. Você irá para nossa página no Catarse.me. 3. Lá, escolha a recompensa de R$99 e finalize seu apoio com segurança!",
         "99 reais": "Exato! Com um apoio de apenas R$99 em nossa campanha no Catarse, você garante a recompensa 'Acesso Pioneiro', que te dá um ano inteiro de acesso à versão Beta, incluindo todos os Max Agentes e participação no grupo exclusivo.",
         "apoiar": "Para apoiar, clique nos botões que te levam para a página do Catarse. Lá você encontrará todas as informações sobre o projeto e as recompensas. Seu apoio é fundamental para tirarmos esse projeto do papel!",
         "catarse": "O Catarse é a plataforma de financiamento coletivo que escolhemos para lançar o Max IA. É um ambiente seguro onde você pode apoiar nosso projeto e garantir sua recompensa de pioneiro.",
-        
-        // Dúvidas Gerais
         "beta": "A versão Beta é uma fase onde a plataforma está quase pronta. Os apoiadores do Catarse serão os primeiros a usar e nos ajudar com feedback valioso para torná-la perfeita antes do lançamento oficial!",
         "chatbot": "Eu sou o MaxTrainer, um dos Max Agentes IA! Minha função aqui é te ajudar a entender tudo sobre o Max IA. Dentro da plataforma, eu ajudo a treinar equipes!",
         "obrigado": "De nada! 😊 Se tiver mais alguma dúvida, é só perguntar! Seu interesse é muito importante para nós.",
@@ -105,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function abrirChat() {
         if (janelaChat && botaoAbrirChat) {
             janelaChat.style.display = 'flex';
-            botaoAbrirChat.style.display = 'none'; // Esconde o botão de abrir
+            botaoAbrirChat.style.display = 'none';
             iniciarConversaChatbot();
             if (chatInput) chatInput.focus();
         }
@@ -114,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function fecharChat() {
         if (janelaChat && botaoAbrirChat) {
             janelaChat.style.display = 'none';
-            botaoAbrirChat.style.display = 'flex'; // Mostra o botão de abrir novamente
+            botaoAbrirChat.style.display = 'flex';
         }
     }
 

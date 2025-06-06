@@ -538,3 +538,386 @@ footer a:hover {
         margin-right: 0;
     }
 }
+/* Estilos Gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: #007bff; /* Azul primário */
+}
+
+/* Header (Hero) */
+#hero {
+    background: #f4f7fc;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+#hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+#hero .hero-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button {
+    background-color: #ff6f61; /* Laranja vibrante */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65a50;
+}
+
+/* Seção Problemas */
+#problemas {
+    padding: 60px 0;
+}
+
+.dores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.dor-item img {
+    margin-bottom: 10px;
+}
+
+.transicao {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Seção Apresentação */
+#apresentacao-max-ia {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+#apresentacao-max-ia p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* Seção Max Agentes */
+#max-agentes {
+    padding: 60px 0;
+}
+.agentes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.agente-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.agente-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* --- ESTILO PARA OS ÍCONES (EMOJI) --- */
+.agente-icon {
+    font-size: 3.5rem; /* Tamanho do emoji */
+    line-height: 1;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background-color: #eef4ff; /* Fundo azul claro */
+    border-radius: 50%; /* Deixar circular */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Seção Diferenciais */
+#diferenciais {
+    padding: 60px 0;
+    background: #f4f7fc;
+}
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.diferencial-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.diferencial-item h4 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+/* Seção Oferta */
+#oferta {
+    padding: 60px 0;
+}
+.highlight-oferta {
+    color: #ff6f61;
+}
+.oferta-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff9f8;
+    border: 2px dashed #ff6f61;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+.oferta-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    display: inline-block;
+}
+.oferta-box ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.preco {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.valor-preco {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff6f61;
+}
+.escassez {
+    margin-top: 20px;
+    font-weight: 700;
+}
+.cta-oferta {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+/* Seção Como Funciona */
+#como-funciona {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+.passos {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    counter-reset: passos-counter;
+}
+.passos li {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.passos li span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* Seção CTA Final */
+#cta-final {
+    padding: 80px 20px;
+    text-align: center;
+}
+#cta-final p {
+    max-width: 800px;
+    margin: 20px auto 30px;
+}
+.cta-grande {
+    font-size: 1.3rem;
+    padding: 20px 40px;
+}
+.duvidas-link {
+    margin-top: 20px;
+}
+.duvidas-link a {
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+.footer-logo {
+    margin-bottom: 15px;
+}
+footer p {
+    margin: 5px 0;
+}
+
+/* --- Estilos do Chatbot --- */
+#chatbot-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#botaoAbrirChat {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+#botaoAbrirChat img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#janela-chat {
+    display: none; /* Inicia fechado */
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#botaoFecharChat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.chat-corpo {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+.chat-corpo p {
+    margin: 0 0 10px;
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 85%;
+    word-wrap: break-word;
+}
+.chat-corpo .bot {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+.chat-corpo .user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+.chat-input {
+    display: flex;
+    border-top: 1px solid #eee;
+    padding: 10px;
+}
+.chat-input input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+.chat-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}

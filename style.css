@@ -15,6 +15,12 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden; /* Garante que não haverá rolagem horizontal */
 }
+
+/* --- AJUSTE FINAL PARA GARANTIR O ENCAIXE NA TELA --- */
+header, section, footer {
+    width: 100vw;
+    max-width: 100%;
+}
 /* ------------------------------------ */
 
 .container {
@@ -426,8 +432,12 @@ footer p {
         font-size: 1rem;
         padding: 12px 25px;
     }
-
-    .agentes-grid, .diferenciais-grid {
+    
+    .agentes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .diferenciais-grid {
         grid-template-columns: 1fr;
     }
 

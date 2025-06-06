@@ -426,7 +426,7 @@ footer p {
         font-size: 1rem;
         padding: 12px 25px;
     }
-    
+
     .agentes-grid, .diferenciais-grid {
         grid-template-columns: 1fr;
     }
@@ -442,5 +442,12 @@ footer p {
         max-height: 500px;
         bottom: 75px;
         right: 15px;
+    }
+}
+
+/* Para telas maiores que 991px (notebooks e desktops) */
+@media (min-width: 992px) {
+    .agentes-grid {
+        grid-template-columns: repeat(3, 1fr); /* Força 3 colunas */
     }
 }

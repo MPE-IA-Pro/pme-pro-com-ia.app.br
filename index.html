@@ -17,33 +17,146 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #05040a; /* Fundo principal escuro */
+            background-color: #05040a;
         }
-
-        /* Gradiente de fundo para a seção Hero */
         .hero-background {
             background-color: #05040a;
             background-image: radial-gradient(circle at 50% 0%, rgba(128, 0, 128, 0.4), transparent 50%);
         }
-
-        /* Gradiente para os botões de CTA */
         .cta-button {
             background: linear-gradient(90deg, #8A2BE2 0%, #FF00FF 100%);
             transition: all 0.3s ease;
         }
-
         .cta-button:hover {
             transform: scale(1.05);
             box-shadow: 0px 0px 25px rgba(255, 0, 255, 0.5);
         }
-        
-        /* Cor da logo */
-        .logo-color {
-            color: #800080; /* Rosa neon escuro */
+        .logo-color { color: #800080; }
+
+        /* Estilos do Chatbot */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(145deg, #8A2BE2, #FF00FF);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        #chatbot-icon:hover { transform: scale(1.1); }
+        #chatbot-icon img { width: 50px; height: 50px; }
+
+        #chat-window {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            width: 350px;
+            height: 500px;
+            background-color: #110f1a;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(0.95) translateY(10px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 999;
+            pointer-events: none;
+        }
+        #chat-window.open {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #chat-header {
+            background: #1c1a2e;
+            padding: 1rem;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #chat-close { cursor: pointer; }
+        #chat-messages {
+            flex-grow: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .message {
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+        .message.user {
+            background-color: #8A2BE2;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+        .message.bot {
+            background-color: #2a2744;
+            color: #e0e0e0;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+        }
+        #chat-input-container {
+            border-top: 1px solid #333;
+            padding: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        #chat-input {
+            flex-grow: 1;
+            background-color: #2a2744;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 0.75rem;
+            color: white;
+        }
+        #chat-send {
+            background-color: #8A2BE2;
+            border: none;
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .typing-indicator span {
+            height: 8px;
+            width: 8px;
+            background-color: #9ca3af;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(3) { animation-delay: -0.16s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
         }
     </style>
 </head>
 <body class="text-gray-200">
+
+    <!-- ... (Todo o conteúdo da header, hero e features continua o mesmo) ... -->
 
     <!-- ========== Header ========== -->
     <header class="fixed w-full bg-black/30 backdrop-blur-sm p-4 z-50">
@@ -181,6 +294,130 @@
             <p>Created by: Yaakov Israel | Ruach AI | Gemini 2.5 Pro</p>
         </div>
     </footer>
+
+    <!-- ========== Chatbot ========== -->
+    <div id="chatbot-icon">
+        <img src="https://i.imgur.com/Gsc3a9m.png" alt="Carinha do Max, mascote do chatbot">
+    </div>
+
+    <div id="chat-window">
+        <div id="chat-header">
+            <span>Fale com o Max!</span>
+            <span id="chat-close">✖</span>
+        </div>
+        <div id="chat-messages">
+            <div class="message bot">
+                Olá! Eu sou o Max, seu mentor de marketing. Como posso te ajudar a decolar seu negócio hoje?
+            </div>
+             <div class="message bot">
+                Ah, e qual o seu universo preferido para analogias? Futebol, Culinária, Carros, Cinema ou Viagens? Isso me ajuda a explicar melhor!
+            </div>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+            <button id="chat-send">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatbotIcon = document.getElementById('chatbot-icon');
+            const chatWindow = document.getElementById('chat-window');
+            const closeButton = document.getElementById('chat-close');
+            const sendButton = document.getElementById('chat-send');
+            const textInput = document.getElementById('chat-input');
+            const messagesContainer = document.getElementById('chat-messages');
+
+            let chatHistory = [];
+            
+            // Função para alternar a visibilidade do chat
+            const toggleChat = () => chatWindow.classList.toggle('open');
+            
+            chatbotIcon.addEventListener('click', toggleChat);
+            closeButton.addEventListener('click', toggleChat);
+
+            // Função para adicionar uma mensagem à interface
+            const addMessage = (sender, text) => {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', sender);
+                messageElement.innerHTML = text; // Usamos innerHTML para renderizar o Markdown simples
+                messagesContainer.appendChild(messageElement);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            };
+
+            // Função para lidar com o envio de mensagens
+            const handleSendMessage = async () => {
+                const userText = textInput.value.trim();
+                if (!userText) return;
+
+                addMessage('user', userText);
+                textInput.value = '';
+                
+                // Mostrar indicador de "digitando"
+                const typingIndicator = document.createElement('div');
+                typingIndicator.classList.add('message', 'bot');
+                typingIndicator.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
+                messagesContainer.appendChild(typingIndicator);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+                try {
+                    // Prepara a chamada para a API Gemini
+                    const prompt = `Você é o Max, um assistente de IA especialista em marketing e o cérebro por trás da plataforma MaxMarketing Total. Sua personalidade é amigável, prestativa e um pouco divertida. Você se comunica de forma clara e adora usar analogias para explicar conceitos complexos de marketing.
+                    
+                    A plataforma MaxMarketing Total possui as seguintes ferramentas: Criador de Posts para Redes Sociais, Criador de Campanhas Estratégicas, Especialista Google Ads Simplificado, Criador de Anúncios de Alta Performance, Estrategista de Mídia Digital e o Max Trainer IA (que é você!).
+
+                    O histórico da nossa conversa até agora é: ${JSON.stringify(chatHistory)}.
+
+                    A nova pergunta do usuário é: "${userText}".
+
+                    Responda à pergunta do usuário. Se ele mencionar um universo de analogia (como futebol, cinema, etc.), use esse universo para explicar. Se não, use uma analogia de marketing geral. Mantenha as respostas concisas e úteis.`;
+
+                    chatHistory.push({ role: "user", parts: [{ text: userText }] });
+
+                    const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
+                    const apiKey = ""; // Deixado em branco para ser tratado pelo ambiente
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`API error: ${response.statusText}`);
+                    }
+
+                    const result = await response.json();
+                    let botText = "Desculpe, não consegui pensar em uma resposta agora. Tente perguntar de outra forma.";
+
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        botText = result.candidates[0].content.parts[0].text;
+                        // Simples formatação de Markdown
+                        botText = botText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    }
+                    
+                    messagesContainer.removeChild(typingIndicator); // Remove o "digitando"
+                    addMessage('bot', botText);
+                    chatHistory.push({ role: "model", parts: [{ text: botText }] });
+
+                } catch (error) {
+                    console.error("Erro ao chamar a API Gemini:", error);
+                    messagesContainer.removeChild(typingIndicator);
+                    addMessage('bot', 'Ops! Tive um problema para me conectar. Pode tentar novamente?');
+                }
+            };
+
+            sendButton.addEventListener('click', handleSendMessage);
+            textInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleSendMessage();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaxMarketing Total - Seu Ecossistema de Marketing com IA</title>
     
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -51,7 +54,11 @@
             z-index: 1000;
         }
         #chatbot-icon:hover { transform: scale(1.1); }
-        #chatbot-icon img { width: 50px; height: 50px; }
+        #chatbot-icon img { 
+            width: 55px; /* Ajustado para melhor encaixe */
+            height: 55px;
+            padding: 2px;
+        }
 
         #chat-window {
             position: fixed;
@@ -155,8 +162,6 @@
     </style>
 </head>
 <body class="text-gray-200">
-
-    <!-- ... (Todo o conteúdo da header, hero e features continua o mesmo) ... -->
 
     <!-- ========== Header ========== -->
     <header class="fixed w-full bg-black/30 backdrop-blur-sm p-4 z-50">
@@ -297,7 +302,7 @@
 
     <!-- ========== Chatbot ========== -->
     <div id="chatbot-icon">
-        <img src="https://i.imgur.com/Gsc3a9m.png" alt="Carinha do Max, mascote do chatbot">
+        <img src="images/carinha_max_marketing_total.png" alt="Carinha do Max, mascote do chatbot">
     </div>
 
     <div id="chat-window">

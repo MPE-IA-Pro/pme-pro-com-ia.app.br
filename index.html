@@ -1,201 +1,186 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max IA: O Futuro Inteligente da Sua Empresa Começa Agora.</title>
-    <meta name="description" content="Apoie nosso projeto no Catarse e seja um dos pioneiros a transformar sua PME ou Agência com o poder de múltiplos agentes de IA. Você no comando!">
-    <meta property="og:title" content="Max IA: Apoie o Lançamento da Sua Empresa Inteligente">
-    <meta property="og:description" content="Garanta 1 ano de acesso por R$99 ao apoiar nosso projeto no Catarse. Revolucione seu negócio com IA.">
-    <meta property="og:image" content="images/agente-max-ia-logo.png">
-    <meta property="og:url" content="https://www.catarse.me/max_ia_empresa_inteligente">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>MaxMarketing Total - Seu Ecossistema de Marketing com IA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #05040a; /* Fundo principal escuro */
+        }
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="max-ia-favicon.ico" type="image/x-icon">
+        /* Gradiente de fundo para a seção Hero */
+        .hero-background {
+            background-color: #05040a;
+            background-image: radial-gradient(circle at 50% 0%, rgba(128, 0, 128, 0.4), transparent 50%);
+        }
+
+        /* Gradiente para os botões de CTA */
+        .cta-button {
+            background: linear-gradient(90deg, #8A2BE2 0%, #FF00FF 100%);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 25px rgba(255, 0, 255, 0.5);
+        }
+        
+        /* Cor da logo */
+        .logo-color {
+            color: #800080; /* Rosa neon escuro */
+        }
+    </style>
 </head>
-<body>
+<body class="text-gray-200">
 
-    <header id="hero">
-        <div class="container">
-            <h1>Max IA: O Futuro Inteligente da Sua Empresa Começa Agora. <span class="highlight">Você no Comando!</span></h1>
-            <p class="subtitle">Apoie nosso projeto no Catarse e seja um dos pioneiros a transformar sua PME ou Agência com o poder de um ecossistema de agentes de IA.</p>
-            <div class="hero-visual">
-                 <img src="images/agente-max-ia-logo.png" alt="Logo Max IA" style="max-width: 400px; margin-bottom: 30px;">
+    <!-- ========== Header ========== -->
+    <header class="fixed w-full bg-black/30 backdrop-blur-sm p-4 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <svg class="h-8 w-8 text-purple-400" fill="#800080" viewBox="0 0 100 85" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="15" y="15" width="70" height="60" rx="10" ry="10" />
+                    <rect x="45" y="5" width="10" height="10" />
+                    <circle cx="50" cy="5" r="5" />
+                    <rect x="5" y="25" width="10" height="40" rx="5" ry="5" />
+                    <rect x="85" y="25" width="10" height="40" rx="5" ry="5" />
+                    <circle cx="35" cy="45" r="8" fill="black" />
+                    <circle cx="65" cy="45" r="8" fill="black" />
+                    <path d="M 35 65 Q 50 75 65 65" stroke="black" stroke-width="2" fill="none" />
+                </svg>
+                <span class="text-2xl font-bold tracking-wider">MMT</span>
             </div>
-            <a href="https://www.catarse.me/max_ia_empresa_inteligente?ref=project_link" target="_blank" class="cta-button">APOIE NO CATARSE E GARANTA SEU ACESSO!</a>
+            <!-- CTA Button -->
+            <a href="#pricing" class="cta-button text-white font-bold py-2 px-6 rounded-full hidden md:block">
+                Quero o Max Agora
+            </a>
         </div>
     </header>
 
-    <section id="problemas">
-        <div class="container">
-            <h2>Sua PME ou Agência enfrenta esses desafios diariamente?</h2>
-            <div class="dores-grid">
-                <div class="dor-item">
-                    <svg class="dor-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg>
-                    <p>Falta de tempo para marketing estratégico?</p>
-                </div>
-                <div class="dor-item">
-                     <svg class="dor-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.77-2.7 1.77-2.24 0-2.81-.92-2.83-2.13H6.1c.07 2.05 1.37 3.44 3.69 3.87V21h3v-2.15c2.02-.46 3.5-1.78 3.5-3.85 0-2.02-1.47-3.32-4.29-4.1z"></path></svg>
-                    <p>Dificuldade com gestão financeira e custos?</p>
-                </div>
-                <div class="dor-item">
-                    <svg class="dor-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.21 1.79-4 4-4h.71C7.37 8.69 8.62 8 10 8c1.66 0 3.02 1.08 3.54 2.54L14 12h5c1.65 0 3 1.35 3 3s-1.35 3-3 3z"></path></svg>
-                    <p>Sobrecarga de tarefas administrativas e de gestão?</p>
-                </div>
-                <div class="dor-item">
-                     <svg class="dor-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
-                    <p>Necessidade de inovar mas sem saber como?</p>
-                </div>
-            </div>
-            <p class="transicao">Chegou a hora de despertar o potencial máximo do seu negócio com Inteligência Artificial.</p>
+    <!-- ========== Hero Section ========== -->
+    <main id="home" class="hero-background pt-32 pb-20">
+        <div class="container mx-auto text-center px-6">
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-4">
+                Ative um <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">Ecossistema de IA</span> e Automatize Todo o seu Marketing
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                O MaxMarketing Total usa agentes de IA exclusivos que aprendem sobre seu negócio, criando campanhas, posts e estratégias que ficam mais inteligentes a cada dia.
+            </p>
+            <a href="#pricing" class="cta-button text-white font-bold py-4 px-10 rounded-full text-lg">
+                Começar a Automatizar
+            </a>
         </div>
-    </section>
+    </main>
 
-    <section id="apresentacao-max-ia">
-        <div class="container">
-            <h2>Conheça o Max IA: Seu Centro de Comando Inteligente</h2>
-            <p>O Max IA é o seu app empresarial vivo e exclusivo. Liderado pelo <strong>Agente Max</strong>, seu assistente pessoal, ele ativa o "algoritmo da sua empresa": um sistema em aprendizado contínuo que oferece insights personalizados, fica mais inteligente a cada dia e capacita você a tomar as melhores decisões. Com o Max IA, você tem múltiplos especialistas virtuais à sua disposição, 24/7.</p>
-            <div class="video-container">
-                <h3>Oi, Eu sou o Max IA</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/eRWjo7Ix0nU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- ========== Features Section ========== -->
+    <section id="features" class="py-20 bg-[#0a0812]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Conheça Seus Agentes de IA Pessoais</h2>
+                <p class="text-gray-400 mt-2">Um time de especialistas em IA prontos para trabalhar para você 24/7.</p>
             </div>
-        </div>
-    </section>
 
-    <section id="max-agentes">
-        <div class="container">
-            <h2>Um Ecossistema de Especialistas: Conheça os Max Agentes IA!</h2>
-            <div class="agentes-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1: Criador de Posts -->
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-purple-900/50 hover:border-purple-600 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1-1m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold text-white">Criador de Posts para Redes Sociais</h3>
+                    </div>
+                    <p class="text-gray-400">Mantenha suas redes sociais ativas e interessantes. Crie para Instagram, Facebook, LinkedIn, Stories, Reels e muito mais.</p>
+                </div>
+
+                <!-- Feature Card 2: Criador de Campanhas -->
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-purple-900/50 hover:border-purple-600 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <h3 class="text-xl font-bold text-white">Criador de Campanhas Estratégicas</h3>
+                    </div>
+                    <p class="text-gray-400">Transforme um objetivo simples, como "vender mais", em um plano de ação completo com criativos de alta performance.</p>
+                </div>
+
+                <!-- Feature Card 3: Especialista Google Ads -->
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-purple-900/50 hover:border-purple-600 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-xl font-bold text-white">Especialista Google Ads Simplificado</h3>
+                    </div>
+                    <p class="text-gray-400">Crie campanhas de pesquisa de alta performance. O Max entrega a estrutura, palavras-chave e anúncios prontos para usar.</p>
+                </div>
                 
-                <div class="agente-card">
-                    <div class="agente-icon">🚀</div>
-                    <h3>MaxMarketing Total</h3>
-                    <p>Cria campanhas completas, posts virais, analisa seu público e concorrência, e desenvolve landing pages e sites que convertem.</p>
+                <!-- Feature Card 4: Criador de Anúncios -->
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-purple-900/50 hover:border-purple-600 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                        <h3 class="text-xl font-bold text-white">Criador de Anúncios</h3>
+                    </div>
+                     <p class="font-semibold text-gray-300 mb-2">Anúncios de Alta Performance</p>
+                    <p class="text-gray-400">Use todo potencial do ADS do Google.</p>
                 </div>
 
-                <div class="agente-card">
-                    <div class="agente-icon">💰</div>
-                    <h3>MaxFinanceiro</h3>
-                    <p>Seu especialista para gestão de fluxo de caixa, análise de custos, precificação inteligente e projeções financeiras.</p>
+                <!-- Feature Card 5: Estrategista de Mídia -->
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-purple-900/50 hover:border-purple-600 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2.01v.01M12 14c-1.11 0-2.08-.402-2.599-1M12 14v1m0-1v-.01M12 16v1m0 1v1m0-2.01v-.01M4.599 13.401A2.002 2.002 0 004 12c0-1.657.895-3 2-3m0 0c.398 0 .779.112 1.103.3M6 9V7.5a3 3 0 013-3h.01M6 9h.01M3 12c0 1.11.402 2.08 1 2.599M3 12h1m-.01.01H4m2.01-2.01h-.01M19.401 10.599A2.002 2.002 0 0020 12c0 1.657-.895 3-2 3m0 0c-.398 0-.779-.112-1.103-.3M18 15v1.5a3 3 0 01-3 3h-.01M18 15h-.01M21 12c0-1.11-.402-2.08-1-2.599M21 12h-1m.01-.01H20m-2.01 2.01h.01"></path></svg>
+                        <h3 class="text-xl font-bold text-white">Estrategista de Mídia Digital</h3>
+                    </div>
+                    <p class="text-gray-400">Defina seu objetivo e orçamento, e receba um plano de mídia acionável, com divisão de verba e público-alvo recomendado.</p>
                 </div>
 
-                <div class="agente-card">
-                    <div class="agente-icon">⚙️</div>
-                    <h3>MaxAdministrativo</h3>
-                    <p>Otimiza processos, gerencia tarefas, organiza documentos e ajuda com as rotinas fiscais e de RH. Mais eficiência para sua gestão.</p>
-                </div>
-
-                <div class="agente-card">
-                    <div class="agente-icon">📊</div>
-                    <h3>MaxPesquisa de Mercado</h3>
-                    <p>Descubra tendências, analise a concorrência, entenda o consumidor e identifique novas oportunidades com dados precisos.</p>
-                </div>
-
-                <div class="agente-card">
-                    <div class="agente-icon">🧭</div>
-                    <h3>MaxBússola Estratégica</h3>
-                    <p>Seu consultor para planejamento, definição de metas, análise SWOT e desenvolvimento de planos de ação para o crescimento.</p>
-                </div>
-
-                <div class="agente-card">
-                    <div class="agente-icon">🎓</div>
-                    <h3>MaxTrainer IA</h3>
-                    <p>Capacite sua equipe com treinamentos personalizados e crie materiais didáticos. (Este agente também alimenta nosso chatbot!)</p>
+                <!-- Feature Card 6: Max Trainer IA -->
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-purple-900/50 hover:border-purple-600 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                        <h3 class="text-xl font-bold text-white">Max Trainer IA</h3>
+                    </div>
+                    <p class="text-gray-400">Seu mentor pessoal para dominar marketing digital. Peça explicações e o Max te ensina usando analogias que você gosta, como futebol!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="diferenciais">
-        <div class="container">
-            <h2>Por que o Max IA é <span class="highlight">Diferente</span>?</h2>
-            <div class="diferenciais-grid">
-                <div class="diferencial-item">
-                    <h4>Ecossistema de Agentes Integrados</h4>
-                    <p>A força de ter múltiplos especialistas que trabalham juntos, de forma coordenada, para o seu sucesso.</p>
-                </div>
-                <div class="diferencial-item">
-                    <h4>Seu "Algoritmo da Empresa"</h4>
-                    <p>O Max IA aprende e se adapta continuamente com os dados do SEU negócio, oferecendo soluções ultra personalizadas.</p>
-                </div>
-                <div class="diferencial-item">
-                    <h4>Você no Comando</h4>
-                    <p>Nossa filosofia é clara: a IA é uma ferramenta poderosa para empoderar suas decisões e otimizar seu trabalho, não para substituí-lo.</p>
-                </div>
-                <div class="diferencial-item">
-                    <h4>Interface Intuitiva com Agente Max</h4>
-                    <p>Fácil de usar e navegar, mesmo para quem não é expert em tecnologia. O Agente Max te acompanha em cada passo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="oferta">
-        <div class="container">
-            <h2><span class="highlight-oferta">Oferta Exclusiva para Apoiadores:</span> Seja um Pioneiro do Max IA!</h2>
-            <div class="oferta-box">
-                <p>Ao apoiar nossa campanha no Catarse, você não apenas viabiliza o futuro da gestão empresarial, mas também garante uma <strong>recompensa incrível e por tempo limitado:</strong></p>
-                <ul>
-                    <li>✅ Acesso por <strong>UM ANO COMPLETO</strong> à versão Beta do Max IA e todos os seus Agentes.</li>
-                    <li>✅ Participação em um <strong>grupo exclusivo</strong> de pioneiros para feedback e networking.</li>
-                    <li>✅ Seu nome nos créditos da plataforma como <strong>apoiador fundador</strong>.</li>
+    <!-- ========== Pricing Section ========== -->
+    <section id="pricing" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Acesso Ilimitado a Todo o Ecossistema</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Um único plano. Todos os agentes de IA. Sem taxas escondidas. Cancele quando quiser.</p>
+            
+            <div class="bg-gray-900/50 border border-purple-800 rounded-lg p-8 max-w-md mx-auto">
+                <h3 class="text-2xl font-bold text-white mb-2">MaxMarketing Total</h3>
+                <p class="text-5xl font-black text-white mb-4">R$180<span class="text-lg font-medium text-gray-400">/ano</span></p>
+                <ul class="text-left space-y-2 text-gray-300 mb-8">
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Acesso a todos os Agentes de IA</li>
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Criações e Campanhas Ilimitadas</li>
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Algoritmo de Aprendizado Contínuo</li>
+                    <li class="flex items-center gap-3"><svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Suporte Prioritário</li>
                 </ul>
-                <p class="preco">Por um apoio único de apenas <span class="valor-preco">R$99,00!</span></p>
-                <p class="escassez"><strong>Recompensa exclusiva da campanha de lançamento no Catarse!</strong></p>
-                <a href="https://www.catarse.me/max_ia_empresa_inteligente?ref=project_link" target="_blank" class="cta-button cta-oferta">QUERO APOIAR E GARANTIR MINHA RECOMPENSA!</a>
+                <a href="#" class="cta-button w-full block text-white font-bold py-4 px-10 rounded-full text-lg">
+                    Assinar Agora e Ativar meu Ecossistema
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="como-funciona">
-        <div class="container">
-            <h2>Como Apoiar em 3 Passos Simples:</h2>
-            <ol class="passos">
-                <li><span>1</span>Clique no botão para visitar nossa página no Catarse.</li>
-                <li><span>2</span>Escolha a recompensa "Acesso Pioneiro" de R$99 (ou outra de sua preferência).</li>
-                <li><span>3</span>Após finalizar o apoio, você receberá um e-mail com o acesso ao grupo exclusivo e todas as instruções!</li>
-            </ol>
-        </div>
-    </section>
-
-    <section id="cta-final">
-        <div class="container">
-            <h2>Pronto para ter o Agente Max e seu time de especialistas trabalhando pelo <span class="highlight">sucesso da sua empresa</span>?</h2>
-            <p>Não perca a chance de ser um pioneiro. Ajude a construir o futuro da gestão empresarial e garanta 1 ano de acesso completo ao Max IA Beta por um valor simbólico. Transforme sua gestão, otimize seus resultados e coloque sua empresa na vanguarda da inovação!</p>
-            <a href="https://www.catarse.me/max_ia_empresa_inteligente?ref=project_link" target="_blank" class="cta-button cta-grande">SIM, QUERO SER UM PIONEIRO POR R$99!</a>
-            <p class="duvidas-link"><a href="#" id="abrirChatDuvidas">Ainda tenho dúvidas? Fale com o MaxTrainer!</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <img src="images/agente-max-ia-logo.png" alt="Logo Max IA" class="footer-logo">
-            <p>© <span id="currentYear"></span> Max IA. Todos os direitos reservados.</p>
-            <p>Um projeto em busca de financiamento coletivo no Catarse.</p>
+    <!-- ========== Footer ========== -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto text-center text-gray-500">
+            <p>Created by: Yaakov Israel | Ruach AI | Gemini 2.5 Pro</p>
         </div>
     </footer>
 
-    <div id="chatbot-flutuante">
-        <button id="botaoAbrirChat">
-            <img src="images/agente-max-ia-logo.png" alt="Agente Max Ícone" class="chat-logo">
-            <span>Olá! Sou o MaxTrainer, posso ajudar?</span>
-        </button>
-        <div id="janela-chat">
-            <div class="chat-header">
-                <span>MaxTrainer IA</span>
-                <button id="botaoFecharChat">×</button>
-            </div>
-            <div class="chat-corpo">
-                </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Digite sua pergunta...">
-                <button>Enviar</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
